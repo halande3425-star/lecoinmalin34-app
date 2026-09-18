@@ -1,0 +1,161 @@
+{
+  "home": [
+    {
+      "id": "shoes",
+      "emoji": "👟",
+      "title": "Chaussures"
+    },
+    {
+      "id": "clothes",
+      "emoji": "👕",
+      "title": "Vêtements"
+    },
+    {
+      "id": "tech",
+      "emoji": "📱",
+      "title": "High-Tech"
+    },
+    {
+      "id": "watches",
+      "emoji": "⌚",
+      "title": "Montres & Bijoux"
+    },
+    {
+      "id": "accessories",
+      "emoji": "👜",
+      "title": "Accessoires"
+    },
+    {
+      "id": "ready",
+      "emoji": "🚚",
+      "title": "Prêts à être expédiés"
+    },
+    {
+      "id": "order",
+      "emoji": "🛒",
+      "title": "Comment passer commande"
+    },
+    {
+      "id": "reviews",
+      "emoji": "💬",
+      "title": "Avis clients"
+    }
+  ],
+  "groups": [
+    {
+      "id": "shoes",
+      "emoji": "👟",
+      "title": "Chaussures",
+      "subtitle": "Découvrez toutes nos chaussures",
+      "topics": [
+        "64",
+        "3616",
+        "402",
+        "663",
+        "767",
+        "4147"
+      ]
+    },
+    {
+      "id": "clothes",
+      "emoji": "👕",
+      "title": "Vêtements",
+      "subtitle": "Sport, luxe, ensembles, doudounes & bonnets",
+      "topics": [
+        "1219",
+        "1525",
+        "934",
+        "1056",
+        "1066",
+        "5977",
+        "5942",
+        "122",
+        "527",
+        "5993"
+      ]
+    },
+    {
+      "id": "tech",
+      "emoji": "📱",
+      "title": "High-Tech",
+      "subtitle": "Électronique & produits tech",
+      "topics": [
+        "223",
+        "168",
+        "1041",
+        "2753",
+        "5519"
+      ]
+    },
+    {
+      "id": "watches",
+      "emoji": "⌚",
+      "title": "Montres & Bijoux",
+      "subtitle": "Montres, G-Shock, bracelets & joncs",
+      "topics": [
+        "476",
+        "215",
+        "190"
+      ]
+    },
+    {
+      "id": "accessories",
+      "emoji": "👜",
+      "title": "Accessoires",
+      "subtitle": "Sacs, casquettes, lunettes, parfums & plus",
+      "topics": [
+        "56",
+        "144",
+        "314",
+        "444",
+        "1086",
+        "805",
+        "5993"
+      ]
+    },
+    {
+      "id": "ready",
+      "emoji": "🚚",
+      "title": "Produits prêts à être expédiés",
+      "subtitle": "Produits disponibles rapidement",
+      "topics": [
+        "3476"
+      ]
+    },
+    {
+      "id": "order",
+      "emoji": "🛒",
+      "title": "Comment passer commande",
+      "subtitle": "Toutes les informations pour commander",
+      "topics": [
+        "76"
+      ]
+    },
+    {
+      "id": "reviews",
+      "emoji": "💬",
+      "title": "Avis clients",
+      "subtitle": "Retours et avis de nos clients",
+      "topics": [
+        "5"
+      ]
+    },
+    {
+      "id": "more",
+      "emoji": "✨",
+      "title": "Voir plus",
+      "subtitle": "Tous nos autres catalogues & services",
+      "topics": [
+        "294",
+        "3327",
+        "2522",
+        "2854",
+        "5793",
+        "5795",
+        "5799",
+        "5502",
+        "6142"
+      ]
+    }
+  ]
+}
