@@ -1,14 +1,14 @@
 
-import os, sqlite3, secrets, hashlib, json
+import os, sqlite3, secrets, hashlib
 from flask import Flask, request, jsonify, session, send_from_directory
 from pathlib import Path
 from datetime import datetime
 
 BASE_DIR = Path(__file__).resolve().parent
 SHOP_WEB = BASE_DIR / "shop_web"
-app = Flask(__name__, static_folder=str(SHOP_WEB), static_url_path="")
+app = Flask(__name__, static_folder=str(SHOP_WEB), static_url_path="/assets")
 app.secret_key = os.environ.get("SHOP_SECRET_KEY", secrets.token_hex(32))
-DB = Path(os.environ.get("SHOP_DB", "/data/shop.db" if Path("/data").exists() else str(BASE_DIR / "shop.db")))
+DB = Path(os.environ.get("SHOP_DB", "/data/shop.db" if Path("/data").exists() else "shop.db"))
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "")
 TELEGRAM_DM = "lecoinmalin34w"
 
@@ -29,10 +29,16 @@ def admin_ok(): return bool(session.get("admin"))
 def user_ok(): return bool(session.get("user_id"))
 
 @app.get("/")
-def home(): return send_from_directory(str(SHOP_WEB),"index.html")
+def home():
+    return send_from_directory(str(SHOP_WEB), "index.html")
 
 @app.get("/health")
-def health(): return jsonify(ok=True, app="lecoinmalin34-app")
+def health():
+    return jsonify(ok=True), 200
+
+@app.get("/<path:filename>")
+def shop_static(filename):
+    return send_from_directory(str(SHOP_WEB), filename)
 
 @app.post("/api/login")
 def login():
