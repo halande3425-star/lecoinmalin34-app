@@ -1,1 +1,1 @@
-web: python shop.py
+web: python bot.py

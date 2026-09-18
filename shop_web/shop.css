@@ -1,0 +1,13 @@
+*{box-sizing:border-box}body{margin:0;background:#09090a;color:#fff;font-family:Arial,sans-serif;overflow-x:hidden}
+.hidden{display:none!important}.splash,.entry{position:fixed;inset:0;background:#050505;z-index:20;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.splash img,.entry img{width:100%;height:100%;object-fit:cover}.splash img{animation:slowZoom 2.7s ease forwards}
+.shine{position:absolute;inset:-30%;background:linear-gradient(110deg,transparent 42%,rgba(255,210,100,.18) 50%,transparent 58%);animation:shine 1.8s ease-in-out infinite}
+.loader{position:absolute;left:12%;right:12%;bottom:8%;height:5px;border:1px solid #c99532;border-radius:20px;overflow:hidden;background:#111}
+.loader i{display:block;height:100%;width:0;background:#f0c45d;animation:load 2.5s ease forwards}.fade{animation:fade .65s forwards}
+.entry button{position:absolute;bottom:8%;left:10%;right:10%;border:0;border-radius:28px;padding:17px;background:linear-gradient(90deg,#b77a16,#ffe08a,#b77a16);color:#111;font-weight:900;font-size:15px;box-shadow:0 0 28px rgba(231,184,75,.35)}
+.reveal{animation:reveal .65s ease}.zoomAway{animation:zoomAway .7s ease forwards}.appReveal{animation:appReveal .8s ease}
+header,main{max-width:900px;margin:auto;padding:20px}header{display:flex;gap:14px;align-items:center;border-bottom:1px solid #332b19}
+.insideBrand{width:88px;height:88px;object-fit:cover;border-radius:20px;border:1px solid #9b7229}h1{color:#e7b84b;margin:0}header p{color:#aaa}
+section{background:#151517;border:1px solid #29292d;border-radius:16px;padding:18px;margin:14px 0}.info{line-height:1.7;border-color:#76571f}
+input,button,select{padding:12px;margin:5px;border-radius:10px;border:1px solid #333;background:#202024;color:white}button,.tg{background:#e7b84b;color:#111;font-weight:bold;text-decoration:none;display:inline-block;padding:12px;border-radius:10px}.product{border-bottom:1px solid #29292d;padding:12px 0}.muted{color:#aaa}
+@keyframes slowZoom{from{transform:scale(1)}to{transform:scale(1.06)}}@keyframes shine{from{transform:translateX(-35%)}to{transform:translateX(35%)}}@keyframes load{to{width:100%}}@keyframes fade{to{opacity:0;transform:scale(1.05)}}@keyframes reveal{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}@keyframes zoomAway{to{opacity:0;transform:scale(1.12)}}@keyframes appReveal{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}

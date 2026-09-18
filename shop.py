@@ -1,12 +1,14 @@
 
-import os, sqlite3, secrets, hashlib
+import os, sqlite3, secrets, hashlib, json
 from flask import Flask, request, jsonify, session, send_from_directory
 from pathlib import Path
 from datetime import datetime
 
-app = Flask(__name__, static_folder="shop_web", static_url_path="")
+BASE_DIR = Path(__file__).resolve().parent
+SHOP_WEB = BASE_DIR / "shop_web"
+app = Flask(__name__, static_folder=str(SHOP_WEB), static_url_path="")
 app.secret_key = os.environ.get("SHOP_SECRET_KEY", secrets.token_hex(32))
-DB = Path(os.environ.get("SHOP_DB", "/data/shop.db" if Path("/data").exists() else "shop.db"))
+DB = Path(os.environ.get("SHOP_DB", "/data/shop.db" if Path("/data").exists() else str(BASE_DIR / "shop.db")))
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "")
 TELEGRAM_DM = "lecoinmalin34w"
 
@@ -27,7 +29,10 @@ def admin_ok(): return bool(session.get("admin"))
 def user_ok(): return bool(session.get("user_id"))
 
 @app.get("/")
-def home(): return send_from_directory("shop_web","index.html")
+def home(): return send_from_directory(str(SHOP_WEB),"index.html")
+
+@app.get("/health")
+def health(): return jsonify(ok=True, app="lecoinmalin34-app")
 
 @app.post("/api/login")
 def login():
