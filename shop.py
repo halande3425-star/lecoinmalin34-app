@@ -80,7 +80,7 @@ def sync_message(message_id):
 @app.get('/')
 def home():return send_from_directory(str(WEB),'index.html')
 @app.get('/<path:name>')
-def static(name):return send_from_directory(str(WEB),name)
+def serve_shop_file(name):return send_from_directory(str(WEB),name)
 @app.get('/media/<path:name>')
 def media_file(name):return send_from_directory(str(MEDIA),name)
 @app.get('/health')
